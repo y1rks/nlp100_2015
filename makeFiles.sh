@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mkdir chapter3
-for i in `seq 20 29`
+mkdir chapter6
+for i in `seq 50 59`
 do
-  touch chapter3/q$i.py
+  touch chapter6/q$i.py
 done
