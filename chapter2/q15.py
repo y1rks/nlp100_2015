@@ -4,7 +4,7 @@
 '''
 import sys
 
-lineNum = int(sys.argv[1]) if len(sys.argv) <= 2 else exit('Invalid args number')
+lineNum = int(sys.argv[1]) if len(sys.argv) == 2 else exit('Invalid args number')
 
 with open('hightemp.txt') as f:
   text = f.readlines()
