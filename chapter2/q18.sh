@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sort -r -k 3 hightemp.txt
+sort -rk 3 hightemp.txt
