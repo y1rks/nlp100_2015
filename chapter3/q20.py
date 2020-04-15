@@ -13,7 +13,7 @@ import gzip
 import json
 
 def getBritishText():
-  with gzip.open('jawiki-country.json.gz', 'rt') as f:
+  with gzip.open('jawiki-country.json.gz', 'rt', encoding='utf-8') as f:
     for line in f.readlines():
       json_file = json.loads(line)
       if json_file['title'] == 'イギリス':
