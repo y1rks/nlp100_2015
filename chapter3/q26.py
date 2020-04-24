@@ -14,6 +14,6 @@ patterns = re.findall(r'^\|(.+?)\s*=\s*(.+?)(?:(?=\n\|)|(?=\n$))', template[0], 
 
 result = {}
 for pattern in patterns:
-    result[pattern[0]] = re.sub(r'\'{2,3}|\'{5}', '', pattern[1])
+    result[pattern[0]] = re.sub(r'\'{3}|\'{5}', '', pattern[1])
 
 print(result)
