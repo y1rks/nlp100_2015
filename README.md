@@ -1,3 +1,3 @@
-# nlp100_2015
-言語処理100本ノック2015版
-http://www.cl.ecei.tohoku.ac.jp/nlp100/
+# nlp100_2020
+言語処理100本ノック2020版
+https://nlp100.github.io/ja/
