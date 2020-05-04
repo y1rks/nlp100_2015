@@ -17,20 +17,22 @@ MeCabの出力フォーマット
 '''
 import re
 
-fileName = 'neko.txt.mecab'
+def mapper():
+    fileName = 'neko.txt.mecab'
+    result = []
 
-result = []
+    with open(fileName, encoding='utf-8') as f:
+        for line in f.readlines():
+            patterns = re.findall(r'^(.+?)\t(.+?),(.+?),(.+?),(.+?),(.+?),(.+?),(.+?),(.+?),(.+?)$', line)
+            if len(patterns) != 0:
+                wordAttribute = {}
+                wordAttribute['surface'] = patterns[0][0]
+                wordAttribute['base'] = patterns[0][7]
+                wordAttribute['pos'] = patterns[0][1]
+                wordAttribute['pos1'] = patterns[0][2]
+                result.append(wordAttribute)
+    
+    return result
 
-count = 0
-with open(fileName, encoding='utf-8') as f:
-    for line in f.readlines():
-        patterns = re.findall(r'^(.+?)\t(.+?),(.+?),(.+?),(.+?),(.+?),(.+?),(.+?),(.+?),(.+?)$', line)
-        if len(patterns) != 0:
-            wordAttribute = {}
-            wordAttribute['surface'] = patterns[0][0]
-            wordAttribute['base'] = patterns[0][7]
-            wordAttribute['pos'] = patterns[0][1]
-            wordAttribute['pos1'] = patterns[0][2]
-            result.append(wordAttribute)
-
-print(result)
+if __name__ == '__main__':
+    print(mapper())
