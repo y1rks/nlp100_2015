@@ -4,5 +4,5 @@
 '''
 import q30
 
-for line in q30.mapper():
-    print(line['surface'])
+for word in q30.mapper():
+    print(word['surface'])

@@ -23,7 +23,7 @@ def mapper():
 
     with open(fileName, encoding='utf-8') as f:
         for line in f.readlines():
-            patterns = re.findall(r'^(.+?)\t(.+?),(.+?),(.+?),(.+?),(.+?),(.+?),(.+?),(.+?),(.+?)$', line)
+            patterns = re.findall(r'^(.+?)\t(.+?),(.+?),(.+?),(.+?),(.+?),(.+?),(.+?).*$', line)
             if len(patterns) != 0:
                 wordAttribute = {}
                 wordAttribute['surface'] = patterns[0][0]
